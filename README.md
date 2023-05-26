@@ -65,7 +65,6 @@ This changes the permissions to allow you to run the setup
 ```
 ./PiFM/setup-pi4.sh
 ```
-
 **Previous Pi Versions**
 ```
 sudo apt-get install git -y
