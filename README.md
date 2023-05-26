@@ -5,7 +5,7 @@ PiFM GTK 1.2.1
 ## What is PiFM?
 This first sections covers the need for PiFM GTK and why it was created. If you are only looking for the installation, skip ahead to the [setup](#Prepping-the-Pi).
 
-PiFM GTK is an extension to the already popular [PiFmAdv](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwio9Zml3rPpAhWMT8AKHY3pB3YQFjAAegQIBhAB&url=https%3A%2F%2Fgithub.com%2Fmiegl%2FPiFmAdv&usg=AOvVaw0yjOcSmzqDT7XF36NZs7zl) repository developd by Miegl. This extension features a small number of additional files that greatly assist the procedure to install and set up the software. The main focus of PiFM GTK is to allow anybody from a complete Linux or radio novice to a command-line expert or radiohead find an affordable substitute to a significantly more expensive FM transmitter which can cost thousands of times more than the Raspberry Pi. This is all controlled through an intuitive graphical interface based on the modern GTK library and means you don't have to struggle with a (for new users especially) intimidating command-line.
+PiFM GTK is an extension to the already popular [PiFmAdv](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwio9Zml3rPpAhWMT8AKHY3pB3YQFjAAegQIBhAB&url=https%3A%2F%2Fgithub.com%2Fmiegl%2FPiFmAdv&usg=AOvVaw0yjOcSmzqDT7XF36NZs7zl) repository developd by Miegl. This extension features a small number of additional files that greatly assist the procedure to install and set up the software. The main focus of PiFM GTK is to allow anybody from a complete Linux or radio novice to a command-line expert or radiohead find an affordable substitute to a significantly more expensive FM transmitter which can cost thousands of times more than the Raspberry Pi. This is all controlled through an intuitive graphical interface based on the modern GTK library and means you don't have to struggle with an (for new users especially) intimidating command-line.
 
 ## Compatibility
 This piece of software is designed to work will all versions of the Raspberry Pi including the Raspberry Pi 4b! The installation is designed to be done on Raspberry Pi OS, which is the Official Raspberry Pi Operating System. It is guaranteed to work on any version from August 2015 and later, as the installer is automatically designed to check that all dependencies are present (previous versions do not have the `rpi-mailbox` driver), however it is recommended to use a fresh install to reduce the likelihood of any errors.
@@ -65,6 +65,8 @@ This changes the permissions to allow you to run the setup
 ```
 ./PiFM/setup-pi4.sh
 ```
+```
+```
 **Previous Pi Versions**
 ```
 sudo apt-get install git -y
@@ -98,12 +100,12 @@ Included are a number of sample audio files located in the `sounds` directory
 * `sound.wav` is the file for testing signal quality vs. range
 * `stereo_44100` allows you to try stereophonic audio
 
-Also included is a dipole calculator allowing you to calculate your antenna length. To use it, open a terminal and type:
+Also included is a dipole calculator allowing you to calculate your dipole antenna length. To use it, open a terminal and type:
 ```
 python3 dipole
 ```
 
-If at any point you wish to close the broadcast, make the terminal window active and press CTRL and C at the same to close the program.
+If at any point you wish to close the broadcast, make the terminal window active and press CTRL and C together to close the program.
 
 ## Advanced Users (those confident with a terminal)
 You can also use PiFM using the terminal
@@ -131,7 +133,7 @@ sudo ./PiFM --audio stereo_44100.wav
 * `--tp` specifies if the program carries traffic information.  Example `--tp 0`.
 * `--dev` specifies the frequency deviation (in KHz). Example `--dev 25.0`.
 * `--mpx` specifies the output mpx power. Default 30. Example `--mpx 20`.
-* `--power` specifies the drive strenght of gpio pads. 0 = 2mA ... 7 = 16mA. Default 7. Example `--power 5`.
+* `--power` specifies the drive strength of gpio pads. 0 = 2mA ... 7 = 16mA. Default 7. Example `--power 5`.
 * `--gpio` specifies the GPIO pin used for transmitting. Available GPIO pins: 4, 20, 32, 34. Default 4. Example `--gpio 32`.
 * `--cutoff` specifies the cutoff frequency (in Hz) used by PiFmAdv's internal lowpass filter. Values greater than 15000 are not compliant. Use carefully.
 * `--preemph` specifies which preemph should be used, since it differs from location. For Europe choose 'eu', for the US choose 'us'.
@@ -237,8 +239,9 @@ The samples are played by `pi_fm_adv.c` that is adapted from Richard Hirst's [Pi
 
 
 ## History
-* Future    : PiFM will have input validation as well as a dipole calculator
-* 2020-05-14: PiFM 1.2.1 Support for the Pi 4 added
+* Future    : Future testing to ensure stability on latest Raspberry Pi OS releases and streamlining install/operation
+* 2023-05-26: edited grammar issues and updated URLs
+* 2020-05-14: PiFM 1.2.1 Support for the Pi 4 added. Python-based dipole calculator added
 * 2020-05-13: PiFM 1.2 developed and released (zenity based gui)
 * 2019-12-01: PiFM 1.1 developed as a personal project (command-line ui)
 * 2015-09-05: support for the Raspberry Pi 2/3
@@ -252,6 +255,6 @@ The samples are played by `pi_fm_adv.c` that is adapted from Richard Hirst's [Pi
 * 2014-04-06: initial release, which only supported 228 kHz monophonic audio input files
 
 --------
-© [Mundeep Lamport](https://instagram.com/mundeep.l) 2020. Re-released under the GNU GPL v3.
+© [Mundeep Lamport]((/www.linkedin.com/in/mundeepl/)) 2023. Re-released under the GNU GPL v3.
 
 
